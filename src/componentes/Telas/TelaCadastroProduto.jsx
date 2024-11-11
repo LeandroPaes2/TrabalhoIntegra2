@@ -3,12 +3,12 @@ import FormCadProdutos from "./Formularios/FormCadProduto";
 import Pagina from "../layouts/Pagina";
 import { useEffect, useState } from "react";
 import TabelaProdutos from "./Tabelas/TabelaProdutos";
-//import { produtos } from "../../dados/mockProdutos";
+import { produtos } from "../../dados/mockProdutos";
 import { consultarProduto } from "../../servicos/servicoProduto";
 
 export default function TelaCadastroProduto(props) {
     const [exibirTabela, setExibirTabela] = useState(true);
-    const [listaDeProdutos, setListaDeProdutos] = useState([]);
+    const [listaDeProdutos, setListaDeProdutos] = useState([produtos]);
     const [modoEdicao, setModoEdicao] = useState(false);
     //const [produtos, setProdutos] = useState([]);
     const [produtoSelecionado, setProdutoSelecionado] = useState({
